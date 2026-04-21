@@ -187,6 +187,9 @@ SIMPLE_JWT = {
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080"
+    "http://localhost:8080",
+    "https://av-gestao.vercel.app",
+    "https://avgestao.onrender.com",
 ]
+
 CORS_ALLOW_CREDENTIALS = True
