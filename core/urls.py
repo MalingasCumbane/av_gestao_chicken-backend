@@ -17,4 +17,5 @@ urlpatterns = [
     # Clients
     path('clients/', views.ClientListCreateView.as_view(), name='client-list'),
     path('clients/<int:id>/', views.ClientDetailView.as_view(), name='client-detail'),
+    path('health/', views.HealthMonitorAPIView.as_view(), name='app-health-detail'),
 ]

@@ -115,3 +115,13 @@ class PendingPaymentsListView(generics.ListAPIView):
             batch__user=self.request.user,
             payment_status='pending'
         ).order_by('payment_due_date')
+    
+
+class HealthMonitorAPIView(APIView):
+    permission_classes = (permissions.AllowAny,)
+
+    def post(self, request, *args, **kwarhs):
+        serializer = {
+            "status_code": 200,
+        }
+        return Response(serializer, status=status.HTTP_200_OK)
