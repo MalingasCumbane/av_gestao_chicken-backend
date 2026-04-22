@@ -12,14 +12,7 @@ class ClientSerializer(serializers.ModelSerializer):
         validated_data['user'] = self.context['request'].user
         return super().create(validated_data)
 
-# class ExpenseSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Expense
-#         fields = '__all__'
-#         read_only_fields = ('id', 'total', 'created_at', 'updated_at')
 
-
-# core/serializers.py
 class ExpenseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Expense
@@ -33,19 +26,6 @@ class ExpenseSerializer(serializers.ModelSerializer):
             validated_data['batch'] = batch
         return super().create(validated_data)
 
-
-# class LossSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Loss
-#         fields = '__all__'
-#         read_only_fields = ('id', 'created_at', 'updated_at')
-
-#     def validate(self, data):
-#         batch = data['batch']
-#         quantity = data['quantity']
-#         if quantity > batch.live_count:
-#             raise serializers.ValidationError(f"Perda excede frangos vivos disponíveis ({batch.live_count}).")
-#         return data
 
 class LossSerializer(serializers.ModelSerializer):
     class Meta:
@@ -95,20 +75,6 @@ class SaleSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Data prevista é obrigatória para pagamento pendente.")
         return data
 
-# class BatchListSerializer(serializers.ModelSerializer):
-#     live_count = serializers.IntegerField(read_only=True)
-#     total_expenses = serializers.DecimalField(max_digits=12, decimal_places=2, read_only=True)
-#     total_sales = serializers.DecimalField(max_digits=12, decimal_places=2, read_only=True)
-#     profit = serializers.DecimalField(max_digits=12, decimal_places=2, read_only=True)
-
-#     class Meta:
-#         model = Batch
-#         fields = [
-#             'id', 'name', 'start_date', 'end_date', 'initial_chicken_count',
-#             'current_chicken_count', 'frozen_count', 'live_count', 'status',
-#             'total_expenses', 'total_sales', 'profit', 'created_at', 'updated_at'
-#         ]
-#         read_only_fields = ('id', 'user', 'current_chicken_count', 'frozen_count', 'created_at', 'updated_at')
 
 class BatchListSerializer(serializers.ModelSerializer):
     # Mapear para os nomes esperados pelo frontend
