@@ -88,19 +88,19 @@ WSGI_APPLICATION = 'avgestao_backend.wsgi.application'
 
 
 DATABASES = {
-                'default': {
-                    'USER': 'mzodqjvb_tsemba',
-                    'PASSWORD': 'p]X%_o161RHC',
-                    'HOST': '127.0.0.1',
-                    'ENGINE': 'django.db.backends.mysql',
-                    'NAME': 'mzodqjvb_apiapp',
-                    'PORT': '3306',
-                    'FIXTURE_DIRS': ['/fixtures'],
-                    'OPTIONS': {
-                        'init_command': 'SET default_storage_engine=INNODB',
-                    }
-                }
+    'default': {
+        'USER': 'mzodqjvb_tsemba',
+        'PASSWORD': 'p]X%_o161RHC',
+        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mzodqjvb_apiapp',
+        'PORT': '3306',
+        'FIXTURE_DIRS': ['/fixtures'],
+        'OPTIONS': {
+            'init_command': 'SET default_storage_engine=INNODB',
+        }
     }
+}
 
 # DATABASES = {
 #    'default': {
@@ -185,7 +185,7 @@ SIMPLE_JWT = {
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
+    # "http://localhost:8080",
     "https://av-gestao.vercel.app",
 ]
 
