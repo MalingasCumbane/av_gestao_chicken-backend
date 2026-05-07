@@ -86,31 +86,29 @@ WSGI_APPLICATION = 'avgestao_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
-# DATABASES = {
-#      "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "avi_gestao",
-#         "USER": "postgres",
-#         "PASSWORD": "Wsxhfs@@12ey",
-#         "HOST": "localhost",
-#         "PORT": "5432"
-#      }
-# }
- 
+DATABASES = {
+                'default': {
+                    'USER': 'mzodqjvb_tsemba',
+                    'PASSWORD': 'p]X%_o161RHC',
+                    'HOST': '127.0.0.1',
+                    'ENGINE': 'django.db.backends.mysql',
+                    'NAME': 'mzodqjvb_apiapp',
+                    'PORT': '3306',
+                    'FIXTURE_DIRS': ['/fixtures'],
+                    'OPTIONS': {
+                        'init_command': 'SET default_storage_engine=INNODB',
+                    }
+                }
+    }
+
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',    
 #        'USER': 'root',
 #        'PASSWORD': 'Wsxhfs@@12ey',                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 #        'HOST': '127.0.0.1',
-#        'NAME': 'stm_db',
+#        'NAME': 'apiappchi',
 #        'PORT': '3306',  # My new port 3380
 #        'FIXTURE_DIRS': ['/fixtures'],
 #        'OPTIONS': {
@@ -189,7 +187,6 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "https://av-gestao.vercel.app",
-    "https://avgestao.onrender.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
